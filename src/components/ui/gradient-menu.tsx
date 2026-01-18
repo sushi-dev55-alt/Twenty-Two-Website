@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaDiscord, FaInfoCircle, FaHome } from 'react-icons/fa'; // Added FaHome
+import { FaDiscord, FaInfoCircle, FaHome, FaGamepad } from 'react-icons/fa'; // Added FaHome
 
 const menuItems = [
     {
@@ -9,6 +9,14 @@ const menuItems = [
         gradientFrom: '#a955ff',
         gradientTo: '#ea51ff',
         to: '/',
+        type: 'internal'
+    },
+    {
+        title: 'Dashboard',
+        icon: <FaGamepad />,
+        gradientFrom: '#06b6d4', // Cyan
+        gradientTo: '#3b82f6',   // Blue
+        to: '/dashboard',
         type: 'internal'
     },
     {

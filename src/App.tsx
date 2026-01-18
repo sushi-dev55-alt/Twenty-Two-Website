@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "@/pages/HomePage";
 import CreditsPage from "@/pages/CreditsPage";
 
+import DashboardPage from "@/pages/DashboardPage";
+
 function App() {
   return (
     <div className="w-full min-h-screen bg-black text-white selection:bg-rose-500/30">
@@ -9,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/credits" element={<CreditsPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </Router>
     </div>
