@@ -3,15 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Hero from "@/components/ui/animated-shader-hero";
 import GradientMenu from "@/components/ui/gradient-menu";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import { FaSearch, FaDownload, FaSteam, FaSpinner, FaExclamationTriangle, FaChevronLeft, FaChevronRight, FaTimes, FaWindows, FaApple, FaLinux } from 'react-icons/fa';
+import { FaSearch, FaDownload, FaSteam, FaSpinner, FaExclamationTriangle, FaChevronLeft, FaChevronRight, FaTimes, FaWindows } from 'react-icons/fa';
 
 // GitHub repo constants
 const GITHUB_REPO = 'sushi-dev55-alt/sushitools-games-repo-alt';
 const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents`;
 const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
 
-// Steam API proxy (using a public CORS proxy for demo - in production use your own backend)
-const STEAM_STORE_API = 'https://store.steampowered.com/api/appdetails';
+
 
 // Items per page
 const ITEMS_PER_PAGE = 24;
@@ -50,11 +49,7 @@ function formatBytes(bytes: number, decimals = 1) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(decimals)) + ' ' + sizes[i];
 }
 
-// Strip HTML tags helper
-function stripHtml(html: string) {
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    return doc.body.textContent || '';
-}
+
 
 export default function DashboardPage() {
     const [games, setGames] = useState<GameFile[]>([]);
