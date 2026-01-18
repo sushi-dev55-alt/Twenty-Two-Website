@@ -8,9 +8,10 @@ const SPRING_CONFIG = { damping: 100, stiffness: 400 };
 type MagneticButtonType = {
     children: React.ReactNode;
     distance?: number;
+    className?: string;
 };
 
-function MagneticButton({ children, distance = 0.6 }: MagneticButtonType) {
+function MagneticButton({ children, distance = 0.6, className }: MagneticButtonType) {
     const [isHovered, setIsHovered] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
@@ -49,6 +50,7 @@ function MagneticButton({ children, distance = 0.6 }: MagneticButtonType) {
     return (
         <motion.div
             ref={ref}
+            className={className}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{
