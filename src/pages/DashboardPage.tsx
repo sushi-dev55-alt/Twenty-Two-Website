@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Hero from "@/components/ui/animated-shader-hero";
 import GradientMenu from "@/components/ui/gradient-menu";
