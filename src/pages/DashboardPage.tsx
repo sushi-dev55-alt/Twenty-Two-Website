@@ -88,7 +88,12 @@ export default function DashboardPage() {
     return (
         <Hero
             headline={{ line1: "Discover", line2: "Games" }}
-            subtitle="Browse the library or add your own Steam App ID."
+            subtitle={
+                <span className="flex items-center justify-center gap-2">
+                    <span>Browse the library or add your own Steam App ID.</span>
+                    <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded-full border border-cyan-500/50">v2.0</span>
+                </span>
+            }
             navContent={<GradientMenu />}
             className="overflow-hidden" // Prevent scrollbar flicker during anims
         >
